@@ -1,0 +1,9 @@
+[Unit]
+Description=A dummy python webserver that serves my homepage.
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 -m http.server 49930 --bind 127.0.0.1 --directory /usr/share/homepage
+
+[Install]
+WantedBy=multi-user.target
